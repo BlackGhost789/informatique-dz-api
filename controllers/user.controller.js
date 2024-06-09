@@ -6,7 +6,7 @@ const login = async (req, res) => {
 
     const user = await User.findOne({username : username, password: password})
     if(user){
-        res.send(user);
+        res.send('authorized');
     }else{
         res.send('wrong credentials')
     }
